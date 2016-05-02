@@ -8,9 +8,9 @@ __This repository includes:__
 
 __Workflow:__
 - Find the corresponding Q of your project
-- 
+- Clone to your local folder
 - Repair the Q with the new dataset
-- 
+- Pull request to the master
 
 
 
