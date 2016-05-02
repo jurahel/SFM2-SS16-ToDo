@@ -8,7 +8,7 @@ __This repository includes:__
 - Styleguide and FAQ - [General Rules](https://github.com/QuantLet/Styleguide-and-FAQ)
 
 __Workflow:__
-- Find the corresponding Q of your project(if not, search [SFE-Ready](https://github.com/QuantLet/SFE-Ready) and send me the name of Q)
+- Find the corresponding Q of your project (if not, search [SFE-Ready](https://github.com/QuantLet/SFE-Ready) and send me the name of Q)
 - Clone to your local folder
 - Repair the Q with the new dataset
 - Pull request to the master
