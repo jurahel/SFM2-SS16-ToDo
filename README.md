@@ -1,5 +1,5 @@
 # SFE-ToDo
-Description: For the student projects of SFM2 SS15
+Description: For the student projects of SFM2 SS16
 
 __This repository includes:__
 - Dataset(2004-2014): The dataset used to update the Qs. (Q = Quantlet)
@@ -16,7 +16,7 @@ __Workflow:__
 
 __Q respository:__
 
-Every QuantLet Repository consists of four elementary parts (Readme.md is not included because it can be automatically provided to your repository by Q team.):
+Every QuantLet Repository consists of four elementary parts (Readme.md is not included because it can be automatically provided to your repository by Q team):
 - input, e.g. dataset
 - code
 - output, e.g. figure
