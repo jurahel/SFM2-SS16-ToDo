@@ -16,9 +16,8 @@ __Workflow:__
 
 __Q respository:__
 
-Every QuantLet Repository consists of four elementary parts:
+Every QuantLet Repository consists of four elementary parts (Readme.md is not included because it can be automatically provided to your repository by Q team.):
 - input, e.g. dataset
 - code
 - output, e.g. figure
 - Metainfo.txt 
-- A standardized Readme.md, which can be automatically provided to your repository by Q team.
