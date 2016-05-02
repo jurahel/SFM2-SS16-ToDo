@@ -1,5 +1,5 @@
-<img src="pics/Project.png" width="80" /> __SFE-ToDo
-Description: For the student projects of SFM2 SS16__
+<img src="pics/Project.png" width="80" /> ___SFE-ToDo___
+Description: For the student projects of SFM2 SS16
 
 __This repository includes:__
 - Dataset(2004-2014): The dataset used to update the Qs. (Q = Quantlet)
