@@ -1,4 +1,4 @@
-# SFE-ToDo
+<img src="pictures/Project.png" width="120" /># SFE-ToDo
 Description: For the student projects of SFM2 SS16
 
 __This repository includes:__
