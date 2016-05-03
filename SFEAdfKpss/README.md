@@ -5,24 +5,19 @@
 
 ```yaml
 
-Name of QuantLet : SFEBSCopt2
+Name of QuantLet: SFEAdfKpss
 
-Published in : Statistics of Financial Markets
+Published in: Statistics of Financial Markets
 
-Description : 'Computes the Black-Scholes price of a European call option. Optionally, option
-parameters may be given interactively as user input.'
+Description: 'Computes the ADF and KPSS test statistics for german blue chips, 1974 - 1996 input.'
 
-Keywords : 'asset, black-scholes, call, european-option, financial, option, option-price, normal
-approximation, normal-distribution, option'
+Keywords: ADF test,
 
-See also : SFEBSCopt1, SFENormalApprox1, SFENormalApprox2, SFENormalApprox3, SFENormalApprox4
+See also: 
 
-Author : Felix Jung
+Author: Joanna Tomanek
 
-Submitted : Wed, April 09 2014 by Felix Jung
-
-Example : 'For [spot price, strike price, interest rate]= [98, 100, 0.05],[cost of carry b,
-volatility sig, tau]= [0.05, 0.20, 20/52], the price of the European call option is given.'
+Example: 
 
 ```
 
