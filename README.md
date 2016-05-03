@@ -1,4 +1,4 @@
-## <img src="pics/Project.png" width="60" /> **SFE-ToDo**
+## <img src="pics/Project.png" width="60" /> **SFM2-SS16-ToDo**
 
 Description: For the student projects of SFM2 SS16
 
