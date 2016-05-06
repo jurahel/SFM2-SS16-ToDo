@@ -53,3 +53,25 @@ and skewness, kurtosis and Bera Jarque statistic for german and british blue chi
 2004 - 2014"
 print(msg2)
 (tab = tab[ord, ])
+# Latex output for tables in presentation chapter 11 p. 22-25
+roundex = function(x, digits) {
+  format(round(x, digits), nsmall = digits)
+}
+tab2           = cbind(roundex(tab[, 1:3], 4), roundex(tab[, 4:5], 2), roundex(tab[, 6], 1))
+# redefining columnames such that they are appropriate for latex
+colnames(tab2) = c("$\\hat{\\rho}_1(r_t)$", 
+                   "$\\hat{\\rho}_1(r_t^2)$", 
+                   "$\\hat{\\rho}_1(|r_t|)$",
+                   "$\\hat{S}$", 
+                   "$\\widehat{Kurt}$", 
+                   "$BJ$")
+latex_output = function(tab) {
+  # raw latex table
+  tmp      = xtable(tab, align = paste0("l|",paste0(rep("r", dim(tab2)[2]), collapse = "")))
+  # adding hline, such that first and last line in table are double lines
+  addtorow = list(pos = list(c(-1, dim(tab)[1])), command = "\\hline ")
+  # final latex table
+  print(tmp, add.to.row = addtorow, sanitize.text.function = function(x) {x})  
+}
+latex_output(tab2[ 1:21, ])  # latex table for German blue chips
+latex_output(tab2[22:42, ])  # latex table for British blue chips 
