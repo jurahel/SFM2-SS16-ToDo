@@ -23,6 +23,11 @@ squared returns and absolute returns and skewness, kurtosis and the Bera Jarque
 statistic for german and british blue chips, 2004 - 2014"
 print(msg1)
 
+# computing log returns and its squared and absolute values
+x       = as.matrix(datax[, -1])  # extracting all data without the non-numeric date column
+ret     = diff(log(x))
+ret_squ = ret^2
+ret_abs = abs(ret)
 
 # computing acf of order 1, skewness, kurtosis and bera jarque statistic
 acf_fun = function(tmp) {
