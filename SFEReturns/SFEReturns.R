@@ -79,12 +79,14 @@ roundex = function(x, digits) {
 }
 tab2           = cbind(roundex(tab[, 1:3], 4), roundex(tab[, 4:5], 2), roundex(tab[, 6], 1))
 # redefining columnames such that they are appropriate for latex
-colnames(tab2) = c("$\\hat{\\rho}_1(r_t)$", 
-                   "$\\hat{\\rho}_1(r_t^2)$", 
-                   "$\\hat{\\rho}_1(|r_t|)$",
+colnames(tab2) = c("$\\hat{\\rho}_1\\left(r_t\\right)$", 
+                   "$\\hat{\\rho}_1\\left(r_t^2\\right)$", 
+                   "$\\hat{\\rho}_1\\left(|r_t|\\right)$",
                    "$\\hat{S}$", 
                    "$\\widehat{Kurt}$", 
                    "$BJ$")
+colnames(tab2) = paste0("\\multicolumn{1}{c}{",colnames(tab2),"}")
+
 latex_output = function(tab) {
   # raw latex table
   tmp      = xtable(tab, align = paste0("l|",paste0(rep("r", dim(tab2)[2]), collapse = "")))
