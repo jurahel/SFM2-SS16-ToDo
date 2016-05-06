@@ -9,7 +9,7 @@ lapply(libraries, function(x) if (!(x %in% installed.packages())) {install.packa
 lapply(libraries, library, quietly = TRUE, character.only = TRUE)
 
 # load data
-datax = read.table("sfm_pri.dat", header = FALSE)
+datax = read.csv("datasetsfm2.csv", header = TRUE, stringsAsFactors = FALSE)
 
 msg1 = "This program calculates the first order auto correlation of returns, squared returns and absolute returns and skewness, kurtosis and the Bera Jarque statistic for german blue chips, 1974 - 1996"
 print(msg1)
