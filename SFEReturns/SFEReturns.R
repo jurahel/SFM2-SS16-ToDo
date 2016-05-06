@@ -23,15 +23,6 @@ squared returns and absolute returns and skewness, kurtosis and the Bera Jarque
 statistic for german and british blue chips, 2004 - 2014"
 print(msg1)
 
-datax = as.matrix(datax)
-stocks = as.matrix(c("all", "allianz", "basf", "bayer", "bmw", "cobank", "daimler", 
-    "deutsche bank", "degussa", "dresdner bank", "hoechst", "karstadt", "linde", 
-    "man", "mannesmann", "preussag", "rwe", "schering", "siemens", "thyssen", 
-    "volkswagen"))
-s = menu(stocks, graphics = TRUE, title = "Select one")
-n = nrow(datax)
-x = (datax[, s])
-st = stocks[s]
 
 # select all companies, if the first menu entry was selected
 if (s == 1) {
