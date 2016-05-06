@@ -53,6 +53,26 @@ and skewness, kurtosis and Bera Jarque statistic for german and british blue chi
 2004 - 2014"
 print(msg2)
 (tab = tab[ord, ])
+
+# Latex output for facts at chapter 11 page 20
+acf_max = grep(pattern = max(tab[,"acf_ret"]), x = tab[,"acf_ret"])
+acf_min = grep(pattern = min(tab[,"acf_ret"]), x = tab[,"acf_ret"])
+print(paste0(rownames(tab)[acf_max]," - highest autocorrelation (",
+             round(max(tab[,"acf_ret"]),4),")"))
+print(paste0(rownames(tab)[acf_min]," - lowest autocorrelation (",
+             round(min(tab[,"acf_ret"]),4),")"))
+
+pos = sum(tab[,"acf_ret"]>=0) # number of stocks with pos. acf
+neg = sum(tab[,"acf_ret"]<0)
+msg3_1 = ifelse(abs(pos/neg) >= 2, "Majority of", "More")
+msg3_2 = ifelse(pos/neg >= 1, "positive", "negative")
+paste0(msg3_1," autocorrelations are ", msg3_2," (",pos," pos., ",neg," neg.)")
+
+CI = qnorm((1 + 0.95)/2)/sqrt(dim(ret)[1])
+if (sum(tab[,"acf_squ"] > CI) == dim(ret)[2] & sum(tab[,"acf_abs"] > CI) == dim(ret)[2])
+  print("Autocorrelation of squared and absolute returns are positive and 
+        signifcantly larger than zero")
+
 # Latex output for tables in presentation chapter 11 p. 22-25
 roundex = function(x, digits) {
   format(round(x, digits), nsmall = digits)
