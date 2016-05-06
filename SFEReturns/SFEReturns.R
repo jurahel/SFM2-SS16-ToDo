@@ -4,8 +4,8 @@ rm(list = ls(all = TRUE))
 graphics.off()
 
 # install and load packages
-libraries = c("fBasics", "tseries")
-lapply(libraries, function(x) if (!(x %in% installed.packages())) {install.packages(x)} )
+libraries = c("fBasics", "tseries", "xtable")
+lapply(libraries, function(x) if (!(x %in% installed.packages())) {install.packages(x)})
 lapply(libraries, library, quietly = TRUE, character.only = TRUE)
 
 # load data
