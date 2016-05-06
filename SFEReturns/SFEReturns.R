@@ -44,8 +44,12 @@ jb_test = function(tmp) {
 }
 jb      = apply(X = ret, MARGIN = 2, FUN = jb_test)
 
-# Output
-msg2 = "first order auto correlation of returns, squared returns and absolute returns and skewness, kurtosis and Bera Jarque statistic for german blue chips, 1974 - 1996"
+# resulting Table
+tab  = cbind(acf_ret, acf_squ, acf_abs, skew, kurt, jb)
+# reordering table by first letter, first German than British with Index above
+ord  = c(1, 1 + order(rownames(tab)[2:21]), 22, 22 + order(rownames(tab)[23:42]))  
+msg2 = "First order auto correlation of returns, squared returns and absolute returns 
+and skewness, kurtosis and Bera Jarque statistic for german and british blue chips, 
+2004 - 2014"
 print(msg2)
-print("")
-result 
+(tab = tab[ord, ])
