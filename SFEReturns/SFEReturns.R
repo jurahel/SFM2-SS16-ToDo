@@ -11,7 +11,9 @@ lapply(libraries, library, quietly = TRUE, character.only = TRUE)
 # load data
 datax = read.csv("datasetsfm2.csv", header = TRUE, stringsAsFactors = FALSE)
 
-msg1 = "This program calculates the first order auto correlation of returns, squared returns and absolute returns and skewness, kurtosis and the Bera Jarque statistic for german blue chips, 1974 - 1996"
+msg1 = "This program calculates the first order auto correlation of returns, 
+squared returns and absolute returns and skewness, kurtosis and the Bera Jarque 
+statistic for german and british blue chips, 2004 - 2014"
 print(msg1)
 
 datax = as.matrix(datax)
