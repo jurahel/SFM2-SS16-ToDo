@@ -24,10 +24,6 @@ statistic for german and british blue chips, 2004 - 2014"
 print(msg1)
 
 
-# select all companies, if the first menu entry was selected
-if (s == 1) {
-    x = (datax[, 2:ncol(datax)])
-    st = c(stocks[2:21])
 }
 
 x = as.matrix(x)
