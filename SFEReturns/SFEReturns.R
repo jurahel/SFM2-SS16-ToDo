@@ -11,6 +11,13 @@ lapply(libraries, library, quietly = TRUE, character.only = TRUE)
 # load data
 datax = read.csv("datasetsfm2.csv", header = TRUE, stringsAsFactors = FALSE)
 
+# select stock names
+pattern = c("...TOT.RETURN.IND", "...XET.", "..XET.", "...ORD..0.50", ".PREF")
+for (i in pattern){
+  colnames(datax) = gsub(pattern = i, replacement = "", x = colnames(datax), fixed = TRUE)
+}
+colnames(datax) = gsub(pattern = ".", replacement = " ", x = colnames(datax), fixed = TRUE)
+
 msg1 = "This program calculates the first order auto correlation of returns, 
 squared returns and absolute returns and skewness, kurtosis and the Bera Jarque 
 statistic for german and british blue chips, 2004 - 2014"
