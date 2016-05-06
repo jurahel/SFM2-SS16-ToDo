@@ -70,8 +70,7 @@ paste0(msg3_1," autocorrelations are ", msg3_2," (",pos," pos., ",neg," neg.)")
 
 CI = qnorm((1 + 0.95)/2)/sqrt(dim(ret)[1])
 if (sum(tab[,"acf_squ"] > CI) == dim(ret)[2] & sum(tab[,"acf_abs"] > CI) == dim(ret)[2])
-  print("Autocorrelation of squared and absolute returns are positive and 
-        signifcantly larger than zero")
+  print("Autocorrelation of squared and absolute returns are positive and signifcantly larger than zero")
 
 # Latex output for tables in presentation chapter 11 p. 22-25
 roundex = function(x, digits) {
