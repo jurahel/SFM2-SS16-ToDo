@@ -4,14 +4,11 @@ rm(list = ls())
 
 # reset graphics
 graphics.off()
-
-# set seed to create constant results
 set.seed(48)
-
 # Install packages if not installed
 libraries = c("tseries")
 lapply(libraries, function(Samples) if (!(Samples %in% installed.packages())) {
-  install.packages(Samples)
+    install.packages(Samples)
 })
 
 # Load packages
@@ -45,33 +42,33 @@ isiglevel = 0.05
 # === Define Functions ===
 # define function to create simulated process
 generateprocess = function(alpha, beta, iSample) {
-  epsilon = rnorm(iSample)
-  x       = rep(0, iSample)
-  for (iCounter in 2:iSample) {
-    x[iCounter] = alpha * x[iCounter - 1] + beta * epsilon[iCounter - 1] + epsilon[iCounter]
-  }
-  return(x)
+    epsilon = rnorm(iSample)
+    x       = rep(0, iSample)
+    for (iCounter in 2:iSample) {
+        x[iCounter] = alpha * x[iCounter - 1] + beta * epsilon[iCounter - 1] + epsilon[iCounter]
+    }
+    return(x)
 }
 
 # adftest for varying p
 adftestvaryp = function(pvec, x) {
-  adftestonep = function(p) {
-    return(adf.test(x, alternative = c("stationary"), k = p)$p.value)
-  }
-  pvalues     = apply(pvec, 1, adftestonep)
-  rejection   = as.numeric(pvalues < isiglevel)
-  return(rejection)
+    adftestonep = function(p) {
+        return(adf.test(x, alternative = c("stationary"), k = p)$p.value)
+    }
+    pvalues     = apply(pvec, 1, adftestonep)
+    rejection   = as.numeric(pvalues < isiglevel)
+    return(rejection)
 }
 
 # define function to simulate rejection probabilities
 ADFSimtest = function(alpha, beta) {
-  res = matrix(rep(NaN, iSimulations, length(pvec)), nrow = iSimulations, ncol = length(pvec))
-  for (iSim in 1:iSimulations) {
-    x           = generateprocess(alpha, beta, iSample)
-    res[iSim, ] = adftestvaryp(pvec, x)
-  }
-  rejectionprob = colMeans(res)
-  return(rejectionprob)
+    res = matrix(rep(NaN, iSimulations, length(pvec)), nrow = iSimulations, ncol = length(pvec))
+    for (iSim in 1:iSimulations) {
+        x           = generateprocess(alpha, beta, iSample)
+        res[iSim, ] = adftestvaryp(pvec, x)
+    }
+    rejectionprob = colMeans(res)
+    return(rejectionprob)
 }
 
 # === Main Computation ===
@@ -80,15 +77,15 @@ teststat = mapply(ADFSimtest, statparams[, 1], statparams[, 2])
 testexp  = mapply(ADFSimtest, expparams[, 1], expparams[, 2])
 
 
-# plot level of test
+# plot power of test
 par(mfrow = c(1, 2), cex.lab = 1.1)
 matplot(pvec, teststat * 100, type = "l", lwd = 3, ylab = "Rejection Probability", xlab = "Lags", 
-        main = "Level of ADF Test", col = c("black", "red3", "blue3", "green3", "magenta3"), 
+        main = "Power of ADF Test", col = c("black", "red3", "blue3", "green3", "magenta3"), 
         xlim = c(min(pvec), max(pvec)), ylim = c(0, 100))
 
-# plot power of test
+# plot level of test
 matplot(pvec, testexp * 100, type = "l", lwd = 3, ylab = "Rejection Probability", xlab = "Lags", 
-        main = "Power of ADF Test", col = c("black", "red3", "blue3", "green3", "magenta3"), 
+        main = "Level of ADF Test", col = c("black", "red3", "blue3", "green3", "magenta3"), 
         xlim = c(min(pvec), max(pvec)), ylim = c(0, 100))
 
 # round results and use only p = 3 and p = 11
@@ -104,8 +101,8 @@ tableexpprint   = cbind(c(" ", "alpha", alpha[2], " "), c(" ", "p", pvec[1], pve
 # print tables
 options(digits = 3)
 cat("\014")
-# table for level of test
-tablestatprint
 # table for power of test
+tablestatprint
+# table for level of test
 tableexpprint
 
