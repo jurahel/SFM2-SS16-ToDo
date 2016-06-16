@@ -10,7 +10,7 @@ See also: SFEacfar2, SFEacfma1, SFEacfma2
 
 Author: Joanna Tomanek, Lasse Groth, Sophie Burgard
 
-Submitted: Wed, September 14 2011 by Awdesch Melzer
+Submitted: Thu, June 16 2016 by Sophie Burgard
 
 Input: 
 - n1, n2 : lags
@@ -19,6 +19,6 @@ Input:
 Output:
 - stacked plots of the generated time series
 
-Example: 'An example is produced for beta=0.5, n1=50 and n2=250.' 
+Example: 'An example is produced for beta = 0.5, n1 = 50 and n2 = 250.' 
 
 

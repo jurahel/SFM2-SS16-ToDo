@@ -10,7 +10,7 @@ See also: SFEacfar1, SFEacfar2, SFEacfma2, SFEpacfar2, SFEpacfma2, SFElikgarch, 
 
 Author: Joanna Tomanek, Lasse Groth, Sophie Burgard
 
-Submitted: Tue, June 16 2016 by Sophie Burgard
+Submitted: Thu, June 16 2016 by Sophie Burgard
 
 Input: 
 - beta : moving average coefficient
