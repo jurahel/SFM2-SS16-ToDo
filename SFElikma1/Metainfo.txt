@@ -8,18 +8,17 @@ Keywords: discrete, graphical representation, linear, moving-average, plot, proc
 
 See also: SFEacfar1, SFEacfar2, SFEacfma2, SFEpacfar2, SFEpacfma2, SFElikgarch, SFElikarch1
 
-Author: Joanna Tomanek, Lasse Groth
+Author: Joanna Tomanek, Lasse Groth, Sophie Burgard
 
-Submitted: Tue, June 17 2014 by Thijs Benschop
-
-Code warning:
-- 'In min(Mod(polyroot(c(1, -model$ar)))) :'
-- no non-missing arguments to min; returning Inf
+Submitted: Tue, June 16 2016 by Sophie Burgard
 
 Input: 
 - beta : moving average coefficient
 - n : lags
 
+Output:
+- plot of exact and conditional likelihood function
+
 Example: 
-- 1: An example is produced for beta=0.5, n=10.
-- 2: An example is produced for beta=0.5, n=20.
+- 1: An example is produced for beta = 0.5, n = 50.
+- 2: An example is produced for beta = 0.5, n = 250.

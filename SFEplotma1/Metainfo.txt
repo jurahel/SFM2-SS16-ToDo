@@ -8,7 +8,7 @@ Keywords: moving-average, stationary, linear, discrete, simulation, time-series,
 
 See also: SFEacfar2, SFEacfma1, SFEacfma2 
 
-Author: Joanna Tomanek, Lasse Groth
+Author: Joanna Tomanek, Lasse Groth, Sophie Burgard
 
 Submitted: Wed, September 14 2011 by Awdesch Melzer
 
@@ -16,8 +16,9 @@ Input:
 - n1, n2 : lags
 - beta : moving average coefficient 
 
-Example: 'An example is produced for beta=0.5, n1=10 and n2=20.' 
+Output:
+- stacked plots of the generated time series
 
-Code warning:
-- 1: 'In min(Mod(polyroot(c(1, -model$ar)))) :'
-- 2: no non-missing arguments to min; returning Inf
+Example: 'An example is produced for beta=0.5, n1=50 and n2=250.' 
+
+
