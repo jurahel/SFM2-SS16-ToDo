@@ -5,7 +5,7 @@ graphics.off()
 set.seed(2)
 
 # parameter settings
-n    = 250
+n    = 50
 beta = 0.5
 
 # Simulation of MA(1)-processes as the true values
@@ -14,7 +14,7 @@ x = as.matrix(x)
 
 # Estimated values for beta
 
-theta = seq(-0.9, by = 0.1, 0.9)
+theta = seq(-0.9, by = 0.01, 0.9)
 k     = length(theta)
 l1    = matrix(1, k, 1)
 l2    = l1
@@ -52,3 +52,11 @@ points(dat2,
        col = 2, 
        lty = 2, 
        lwd = 2)
+
+#line indicating max. of exact likelihood
+abline(v   = theta[which.max(l1)])
+
+#line indicating true parameter
+abline(v   = beta, 
+       lty = 2)
+
