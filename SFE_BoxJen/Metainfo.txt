@@ -12,7 +12,7 @@ Description:      'SFE_BoxJen code introduces the Box-Jenkins Method. First, it
                   the above function is being diagnosed.'
 
 
-Keywords:         Box Jenkins, time series, AR, MA, ARMA
+Keywords:         Box-Jenkins, time-series, ARMA, ACF, PACF, estimation, AIC
 
 Author:           Sophie Stadlinger, Karolina Stanczak
 
