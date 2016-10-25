@@ -1,0 +1,12 @@
+Name of QuantLet: SFEAdfKpss
+
+Published in: Statistics of Financial Markets
+
+Description: 'Computes the ADF and KPSS test statistics for 20 biggest companies (by market capitalisation) of FTSE100 and DAX. Estimated ADF and KPSS test with only a constant and a constant plus linear trend. Adds asterisk to indicate significance at 5%-confidence level'
+
+Keywords: ADF-Test, nonstationary, dax, ftse100, random-walk
+
+
+Author: Joanna Tomanek, Sophie Burgard
+
+
