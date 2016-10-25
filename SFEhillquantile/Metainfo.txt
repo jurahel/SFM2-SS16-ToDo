@@ -1,0 +1,8 @@
+Name of QuantLet : SFEhillquantile 
+Published in: Statistics of Financial Markets
+
+Description: 'Hill quantile estimation based on random numbers drawn from standardized Pareto distribution.'
+
+Keywords: VaR, distribution, estimation, extreme-value, forecast, generalized-pareto-model, hill-estimator, pareto, quantile, risk, standard
+
+Author: Joanna Tomanek, Sophie Burgard
