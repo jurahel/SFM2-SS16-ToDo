@@ -18,10 +18,12 @@ Keywords:
 - skewness
 - statistics
 
-Author: Marius Sterling
+Author[r]: Marius Sterling
+Author[p]: Justin Hellermann
 
 Submitted: Mon, August 01 2016 by Shi Chen
 
-Datafiles: 'datasetsfm2.csv'
+Datafiles[r]: 'datasetsfm2.csv'
+Datafiles[p]: 'datasetsfm2.csv'
 
 Example: 
